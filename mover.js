@@ -1,6 +1,11 @@
 
 
 
+// Name       : Gun Kim
+// Assignment : Final Project - Make a Game
+// Course     : CS099
+// Spring 2021
+
 
 class Mover {
   constructor(x, y) {
@@ -28,6 +33,11 @@ class Mover {
       this.vel.x *= -1;
     }
   }
+
+  // hits(obstacles)
+  // {
+  //   return( this.pos.x + 15 , this.pos.y + 15 , 30,30,30  )
+  // }
 
   update() {
  
