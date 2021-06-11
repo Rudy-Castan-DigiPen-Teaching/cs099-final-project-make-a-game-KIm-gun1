@@ -23,6 +23,6 @@ class Obstacles
         stroke(255)
         point( this.x, this.y )
         fill(255)
-        rect( this.x, this.y2, random(10,100), 10 )
+        circle( this.x, this.y2, 10, 10 )
     }
 }

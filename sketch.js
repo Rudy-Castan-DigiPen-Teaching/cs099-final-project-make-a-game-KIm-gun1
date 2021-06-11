@@ -13,6 +13,8 @@ let obstacles = [];
 function setup() {
   createCanvas(800, 400);
   mover = new Mover(200,370);
+
+  
 }
 
 function draw() {
@@ -47,7 +49,7 @@ function draw() {
         o.move();
         o.show();
         
-      if( keyCode == '68' )
+      if( mover.hits(o) )
       {
         fill(255)
         text( 'GAME OVER', 100,100 )
@@ -55,12 +57,17 @@ function draw() {
       }
       }
 
-      }
+      
       break;
-  
     }
-  
+  }
+
+      hit = collideCircleCircle( 50,50,50,50,50,50 )         
+ 
 }
+      
+  
+
 
 function keyPressed()
 {

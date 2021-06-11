@@ -34,10 +34,11 @@ class Mover {
     }
   }
 
-  // hits(obstacles)
-  // {
-  //   return( this.pos.x + 15 , this.pos.y + 15 , 30,30,30  )
-  // }
+  hits(obstacles)
+  {
+    
+    return collideCircleCircle( this.pos.x, this.pos.y , 30 , obstacles.x, obstacles.y2, 10  )
+  }
 
   update() {
  
@@ -58,7 +59,7 @@ class Mover {
     }
  
     fill(f)
-    ellipse(this.pos.x, this.pos.y , 30);
+    circle(this.pos.x, this.pos.y , 30);
 
   
   }
