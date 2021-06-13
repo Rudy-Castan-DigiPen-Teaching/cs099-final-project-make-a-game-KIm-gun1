@@ -27,6 +27,10 @@ function draw() {
       textSize(30)
       text( 'START : ENTER ',100,100)
       text( 'RULE : R ', 100,130)
+      push()
+      textSize(100)
+      text( 'FRYING MASTER',20,280)
+      pop()
     }
     break;
     
