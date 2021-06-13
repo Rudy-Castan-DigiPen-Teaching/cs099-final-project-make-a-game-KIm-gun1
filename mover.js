@@ -24,6 +24,11 @@ class Mover {
       this.pos.y = height - 16;
       this.vel.y *= -0.7;
     }
+    if( this.pos.y <= 0 + this.r)
+    {
+      this.pos.y = 16
+      this.vel.y *= -0.7
+    }
   
     if (this.pos.x >= width - this.r) {
       this.pos.x = width - this.r;
@@ -53,7 +58,7 @@ class Mover {
     strokeWeight(2);
 
     let f = 0
-    if(keyIsDown('68'))
+    if(keyIsDown('68') || keyIsDown('32') )
     {
      f = 255
     }
