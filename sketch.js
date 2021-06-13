@@ -39,7 +39,7 @@ function draw() {
       fill(255)
       text( 'JUMP : SPACE', 100,130)
       text( 'DASH DOWN : D', 100, 100)
-      text( 'Use the jump to avoid the white ball' , 80 , 200)
+      text( 'Use the jump and bounce to avoid the white ball' , 80 , 200)
       text( ' Hang in there and break your record.', 80, 230 )
       text( ' START : ENTER ', 100,300 )
       push()
