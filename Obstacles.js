@@ -10,7 +10,7 @@ class Obstacles
     {
       this.x = width;   
       this.y = random(0,100)
-      this.y2 = random( 200,400)
+      this.y2 = random( 0,400)
     }
 
     move()

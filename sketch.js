@@ -3,8 +3,7 @@
 // Course     : CS099
 // Spring 2021
 
-const MAIN_MENU = 0;
-const GAME_SCREEN = 1;
+
 let CurrentScreen = MAIN_MENU ;
 
 let mover;
@@ -27,13 +26,31 @@ function draw() {
       fill(255)
       textSize(30)
       text( 'START : ENTER ',100,100)
-      text( 'JUMP : SPACE', 100,130)
-      text( 'STOP TIME : D', 100, 160)
+      text( 'RULE : R ', 100,130)
     }
     break;
-   
+    
+    case RULE :
+    {
+      fill(255)
+      text( 'JUMP : SPACE', 100,130)
+      text( 'DASH DOWN : D', 100, 100)
+      text( 'Use the jump to avoid the white ball' , 80 , 200)
+      text( ' Hang in there and break your record.', 80, 230 )
+      text( ' START : ENTER ', 100,300 )
+      push()
+      textSize(20)
+      text('(Take advantage of the collision with the ground.)', 342 ,100 )
+      pop()
+    }
+    break;
+    
+    
+    
+    
     case GAME_SCREEN: {
     let gravity = createVector(0, 0.3);
+
     mover.applyForce(gravity);
     mover.update();
     mover.edges();
@@ -53,6 +70,7 @@ function draw() {
       {
         fill(255)
         text( 'GAME OVER', 100,100 )
+        text( 'RESTART : ENTER', 100,130)
         noLoop();
       }
       }
@@ -79,31 +97,56 @@ function keyPressed()
         {
           CurrentScreen = GAME_SCREEN;
         }
+        if( keyCode == '82')
+        {
+          CurrentScreen = RULE;
+        }
       }
       break;
 
-     case GAME_SCREEN:
-       {
-         if(keyCode == '13')
-         {
-           CurrentScreen = MAIN_MENU;
-         }
-       }   
-       break;
+
+    case GAME_SCREEN:
+      {
+        if (keyCode == '13')
+        {
+          CurrentScreen == MAIN_MENU;
+        }
+      }
+      break;
+
+
+      case RULE:
+        {
+          if (keyCode == '13')
+          {
+            CurrentScreen == GAME_SCREEN;
+          }
+        }
+        break;
+  
   }
 
 
 
-    //jump = space = 32
+    
     if(keyCode == '32')
     {
     let jump = createVector(0, -5);
     mover.applyForce(jump);
     }
 
+    if( keyCode == '68' )
+  {
+    let dash = createVector(  0, 10)
+    mover.applyForce(dash)
+  }
+    
+
 
     
-}
+  }
+
+
 
 
 
