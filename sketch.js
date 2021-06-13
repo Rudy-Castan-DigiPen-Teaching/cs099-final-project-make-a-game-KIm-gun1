@@ -9,6 +9,8 @@ let CurrentScreen = MAIN_MENU ;
 let mover;
 let obstacles = [];
 
+let x = 0;
+
 function setup() {
   createCanvas(800, 400);
   mover = new Mover(200,370);
@@ -76,15 +78,16 @@ function draw() {
         text( 'GAME OVER', 100,100 )
         text( 'RESTART : ENTER', 100,130)
         noLoop();
+        x = 1
       }
       }
 
-      
+      hit = collideCircleCircle( 50,50,50,50,50,50 )  
       break;
     }
   }
 
-      hit = collideCircleCircle( 50,50,50,50,50,50 )         
+          //hit = collideCircleCircle( 50,50,50,50,50,50 )  
  
 }
       
@@ -111,24 +114,33 @@ function keyPressed()
 
     case GAME_SCREEN:
       {
-        if (keyCode == '13')
+        if (keyCode == '13'    )
         {
-          CurrentScreen == MAIN_MENU;
+          CurrentScreen = MAIN_MENU;
         }
       }
       break;
-
-
+   
       case RULE:
         {
           if (keyCode == '13')
           {
-            CurrentScreen == GAME_SCREEN;
+            CurrentScreen = GAME_SCREEN;
           }
         }
         break;
   
   }
+  // switch(CurrentScreen)
+  // {
+  //   case GAME_SCREEN:
+  //     {
+  //       if(keyCode == '13')
+  //       {
+  //         CurrentScreen = MAIN_MENU;
+  //       }
+  //     }
+  // }
 
 
 
