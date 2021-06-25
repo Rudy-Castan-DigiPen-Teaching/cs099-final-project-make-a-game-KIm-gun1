@@ -1,0 +1,9 @@
+// Name       : Gun Kim
+// Assignment : Final Project - Make a Game
+// Course     : CS099
+// Spring 2021
+
+
+Vectors were used to create gravity and make the ball bounce.
+
+NoLoop() was used to make the ball stop when it touched the object.

@@ -31,7 +31,7 @@ function draw() {
       text( 'RULE : R ', 100,130)
       push()
       textSize(100)
-      text( 'FRYING MASTER',20,280)
+      text( 'FLYING MASTER',20,280)
       pop()
     }
     break;
@@ -72,14 +72,16 @@ function draw() {
         o.move();
         o.show();
         
-      if( mover.hits(o) )
-      {
-        fill(255)
-        text( 'GAME OVER', 100,100 )
-        text( 'RESTART : ENTER', 100,130)
-        noLoop();
-        x = 1
-      }
+          if( mover.hits(o) )
+          {
+            
+            fill(255)
+            text( 'GAME OVER', 100,100 )
+            text( 'MAINMENU : F5', 100,130)
+            noLoop();
+        
+          }
+
       }
 
       hit = collideCircleCircle( 50,50,50,50,50,50 )  
@@ -87,7 +89,7 @@ function draw() {
     }
   }
 
-          //hit = collideCircleCircle( 50,50,50,50,50,50 )  
+          
  
 }
       
